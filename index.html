@@ -80,7 +80,7 @@
             const resultCount = document.getElementById('resultCount');
             resultsDiv.innerHTML = '';
             
-            const regex = new RegExp(`${hashtag}[^#]*`, 'gi');
+            const regex = new RegExp(`(?:^|\n)([^\n]*${hashtag}[^\n]*)`, 'gi');
             const matches = text.match(regex);
 
             if (matches && matches.length > 0) {
